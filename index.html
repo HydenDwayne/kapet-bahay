@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kape't Bahay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Kape't Bahay</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Freshly Brewed Coffee</h1>
+        <p>Enjoy a warm cup of coffee grown by Filipino farmers and brewed right in your neighborhood.</p>
+        <a href="#services" class="btn">See Our Menu</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>Kape't Bahay is a small coffee shop in Plae Grownd Stret. We started in 2020 with one small cart and a big love for coffee.</p>
+        </div>
+        <div class="about-box">
+          <p class="big">6+</p>
+          <p>years serving the community</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2>What We Offer</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/coffee.jpg" alt="A cup of hot coffee on a saucer">
+            <div class="card-text">
+              <h3>Hot &amp; Iced Coffee</h3>
+              <p>Barako, latte, and cold brew made fresh every morning.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/pastries.jpg" alt="An ensaymada pastry on a plate">
+            <div class="card-text">
+              <h3>Pastries</h3>
+              <p>Ensaymada, pandesal, and cakes baked by a local baker.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/beans.webp" alt="A sack of coffee beans with beans spilling out">
+            <div class="card-text">
+              <h3>Beans to Go</h3>
+              <p>Buy ground or whole beans to brew at home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <p><strong>Address:</strong> 123 Plae Grownd Stret</p>
+          <p><strong>Phone:</strong> 0922 595 8777</p>
+          <p><strong>Email:</strong> kapetbahay@gmail.com</p>
+          <p><strong>Open:</strong> Mon-Sat, 9:00 AM - 10:00 PM</p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kape't Bahay. All rights reserved.</p>
+  </footer>
+
+  <script>
+    var menuBtn = document.getElementById("menuBtn");
+    var nav = document.getElementById("nav");
+
+    menuBtn.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+
+    var links = nav.querySelectorAll("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        nav.classList.remove("open");
+      });
+    }
+  </script>
+</body>
+</html>
